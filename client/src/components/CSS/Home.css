@@ -1,0 +1,19 @@
+.linkStyle{
+    text-decoration: none;
+    font-size:120%;
+    font-weight: 500;
+}
+
+.headingStyle{
+    text-align: center;
+}
+
+.homeCard{
+    height: 200px;
+    margin-top: 20%;
+}
+
+.homeText{
+    font-size: 120%;
+    font-weight: 400;
+}
