@@ -3,7 +3,7 @@
     margin: 2%;
 }
 
-.signInCard{
+.signUpCard{
     padding-top: 10%;
     margin: 2%;
     max-width: 500px;
@@ -14,12 +14,12 @@
     text-align: center;
 }
 
-.loginHeading{
+.signUpHeading{
     margin: 20px;
     padding-bottom: 10px;
 }
 
-.signinButton{
+.signUpButton{
     width:max-content;
     color: #fff!important;
     text-decoration: none;

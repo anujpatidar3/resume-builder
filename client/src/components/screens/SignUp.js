@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap'
-
+import '../CSS/SignUp.css'
+import {Link} from 'react-router-dom';
 
 const SignUp = () => {
     return (
@@ -17,9 +18,13 @@ const SignUp = () => {
                     </div>
                 </Col>
                 <Col sm={12} lg={6}>
-                    <div className="signInCard">
-                        <div className="card ">
-                            <h2>Resume Builder</h2>
+                    <div className="signUpCard">
+                        <div className="card AuthCard input-field">
+                            <h2 className="signUpHeading">RESUME BUILDER</h2>
+                            <input
+                                type="text"
+                                placeholder="Name"
+                            />
                             <input
                                 type="email"
                                 placeholder="Email"
@@ -28,6 +33,10 @@ const SignUp = () => {
                                 type="password"
                                 placeholder="Password"
                             />
+                            <button className="signUpButton btn waves-effect waves-light blue darken-1">Sign Up</button>
+                            <h5>
+                                <Link className="linkStyle" to='/signin'>Already Have an Account?</Link>
+                            </h5>
                         </div>
                     </div>
                 </Col>
