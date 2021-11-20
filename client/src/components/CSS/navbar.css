@@ -1,0 +1,26 @@
+.navbarStyling {
+    background-color: #17a2b8;
+}
+
+
+.logoStyle {
+    text-decoration: none !important;
+    margin-left: 5%;
+    box-sizing: border-box;
+    font-size: 150%;
+}
+
+.logoStyle:hover {
+    color: white;
+}
+
+.logOutButton {
+    text-decoration: none !important;
+    margin-right: 5%;
+    width: max-content;
+    font-size: 150%;
+}
+
+.logOutButton:hover {
+    color: white;
+}
