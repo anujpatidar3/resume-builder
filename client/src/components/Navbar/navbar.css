@@ -5,7 +5,6 @@
 
 .logoStyle {
     text-decoration: none !important;
-    margin-left: 5%;
     box-sizing: border-box;
     font-size: 150%;
 }
@@ -16,7 +15,6 @@
 
 .logOutButton {
     text-decoration: none !important;
-    margin-right: 5%;
     width: max-content;
     font-size: 150%;
 }
