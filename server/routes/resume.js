@@ -34,8 +34,8 @@ router.get('/myresumes',requireLogin, async (req, res) => {
 
 router.post('/createresume', requireLogin, async (req, res) => {
     try {
-        const { name } = req.body;
-        if (!name) {
+        const { name, emailID } = req.body;
+        if (!name || !emailID) {
             return res.status(422).json({ error: "Please Add All the Fields" })
         }
         req.user.password = undefined

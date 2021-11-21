@@ -9,7 +9,38 @@ const SignIn = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    
+
+    const PostData = () => {
+        if (!/^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) {
+            toast('Invalid Email', { position: toast.POSITION.TOP_RIGHT })
+            return
+        }
+        fetch("/signin", {
+            method: "Post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email,
+                password
+            })
+        }).then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.error) {
+                    toast(data.error,
+                        { position: toast.POSITION.TOP_RIGHT })
+                } else {
+                    toast("Signed In Successfully",
+                        { position: toast.POSITION.TOP_RIGHT })
+                    navigate('/')
+                }
+            }).catch(err => {
+                console.log(err)
+            })
+    }
+
+
     return (
         <Container>
             <Row>
@@ -30,12 +61,18 @@ const SignIn = () => {
                             <input
                                 type="email"
                                 placeholder="Email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                             />
                             <input
                                 type="password"
                                 placeholder="Password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                             />
-                            <button className="signinButton btn waves-effect waves-light blue darken-1">Log In</button>
+                            <button className="signinButton btn waves-effect waves-light blue darken-1"
+                                onClick={() => PostData()}
+                            >Log In</button>
                             <h5 >
                                 <Link className="linkStyle" to='/signup'>Don't Have an Account?</Link>
                             </h5>
