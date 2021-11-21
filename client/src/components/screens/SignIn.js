@@ -18,7 +18,8 @@ const SignIn = () => {
         fetch("/signin", {
             method: "Post",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Authorization":"Bearer "+localStorage.getItem("jwt")
             },
             body: JSON.stringify({
                 email,
@@ -31,6 +32,8 @@ const SignIn = () => {
                     toast(data.error,
                         { position: toast.POSITION.TOP_RIGHT })
                 } else {
+                    localStorage.setItem("jwt",JSON.stringify(data.token))
+                    localStorage.setItem("user",JSON.stringify(data.user))
                     toast("Signed In Successfully",
                         { position: toast.POSITION.TOP_RIGHT })
                     navigate('/')
