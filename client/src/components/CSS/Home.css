@@ -11,9 +11,21 @@
 .homeCard{
     height: 200px;
     margin-top: 20%;
+    margin-right: 10%;
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    box-shadow: 0 2px 5px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.homeCard:hover{
+    transform: scale(1.25);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
 
 .homeText{
     font-size: 120%;
     font-weight: 400;
+}
+
+.homeText:hover{
+    cursor: pointer;
 }
