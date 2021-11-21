@@ -9,7 +9,8 @@
 }
 
 .homeCard{
-    height: 200px;
+    height: 200px!important;
+    width: 380px;
     margin-top: 20%;
     margin-right: 10%;
     transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
