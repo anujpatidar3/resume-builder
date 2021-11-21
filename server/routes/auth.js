@@ -9,12 +9,12 @@ const {JWT_SECRET}=require('../keys')
 const requireLogin =require('../middleware/requireLogin')
 
 
-router.post('/signup', async (req, res) => {
+router.post('/signup',  (req, res) => {
     const { name, email, password } = req.body;
     if (!email || !password || !name) {
-        res.status(422).json({ error: "Please add all the fields" })
+        return res.status(422).json({ error: "Please add all the fields" })
     }
-    await User.findOne({ email: email })
+    User.findOne({ email: email })
         .then((savedUser) => {
             if (savedUser) {
                 return res.status(422).json({ error: "User already exists with that email" })
@@ -28,7 +28,7 @@ router.post('/signup', async (req, res) => {
                     })
 
                     user.save().then(user => {
-                        res.json({ message: "Saved Succesfully" })
+                        res.json({ message: "User Saved Succesfully" })
                     }).catch(err => {
                         console.log(err)
                     })
