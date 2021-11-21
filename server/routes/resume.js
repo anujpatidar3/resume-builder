@@ -41,6 +41,7 @@ router.post('/createresume', requireLogin, async (req, res) => {
         req.user.password = undefined
         const resume = new Resume({
             name,
+            emailID,
             createdBy: req.user
         })
         resume.save().then(result => {
