@@ -34,8 +34,8 @@ router.get('/myresumes',requireLogin, async (req, res) => {
 
 router.post('/createresume', requireLogin, async (req, res) => {
     try {
-        const { name, emailID } = req.body;
-        if (!name || !emailID) {
+        const { name, emailID, institueName, majorCourseName, minorCourseNam, gradutionMonthAndYear, institueLocation, CGPA, institueNameSecond, majorCourseNameSecond, minorCourseNameSecond, gradutionMonthAndYearSecond, institueLocationSecond, CGPASecond, githubProfile, linkedInProfile, hackerrankProfile, codechefProfile, twitterProfile, PortfolioProfile, courseWorkSubjectsOne, courseWorkSubjectsTwo, courseWorkSubjectsThree, courseWorkSubjectsFour, courseWorkSubjectsFive, technologyOne, technologyTwo, technologyThree, technologyFour, developmentFive, programmingLanguagesOne, programmingLanguagesTwo, programmingLanguagesThree, programmingLanguagesFour, programmingLanguagesFive, databaseOne, databaseTwo, databaseThree, databaseFour, databaseFive, achievementsOne, achievementsTwo, achievementsThree, firstProjectName, firstProjectDescription, secondProjectName, secondProjectDescription, thirdProjectName, thirdProjectDescription, positionsofRespobsibility, positionDescription, createdBy } = req.body;
+        if (!name || !emailID || !institueName || !majorCourseName || !minorCourseNam || !gradutionMonthAndYear || !institueLocation || !CGPA || !firstProjectName || !firstProjectDescription || !secondProjectName || !secondProjectDescription ) {
             return res.status(422).json({ error: "Please Add All the Fields" })
         }
         req.user.password = undefined
