@@ -5,18 +5,18 @@ import '../CSS/resumeTempOne.css'
 const MyResumes = () => {
     return (
         <div>
-            <Container className="card">
+            <Container className="card resumeCard">
                 <Row>
                     <div >
-                        <Col className="heading">
+                        <div className="heading">
                             <h3 className="heading">Anuj Patidar</h3>
-                        </Col>
-                        <Col className="subHeading">
+                        </div>
+                        <div className="subHeading">
                             <h5 className="subHeading">anujpatidar3@gmail.com</h5>
                             <hr />
-                        </Col>
-                        <div>
-                            <Col className="firstColumn">
+                        </div>
+                        <div className="columns">
+                            <div className="firstColumn">
                                 <div>
                                     <h5>Education</h5>
                                     <div>
@@ -93,10 +93,8 @@ const MyResumes = () => {
                                         <li>Goal-Oriented</li>
                                     </ol>
                                 </div>
-                            </Col>
-                        </div>
-                        <div>
-                            <Col className="secondColumn">
+                            </div>
+                            <div className="secondColumn">
                                 <div>
                                     <h5>Technical Projects</h5>
                                     <div className="appOne">
@@ -104,52 +102,34 @@ const MyResumes = () => {
                                         <br />
                                         <h7>App date</h7><br />
                                         <ol>
-                                            <li>Lorem ipsum dolor sit amet. Est voluptatem laudantium rem necessitatibus assumenda At quia delectus. In internos libero sit quia tempora est placeat distinctio aut quae nostrum ea vero ullam aut aliquid optio est rerum quia.
-                                            Qui quaerat consequuntur et unde neque est quia magnam quo rerum explicabo 33 incidunt dicta vel quam adipisci. Est earum laborum qui galisum obcaecati est eveniet libero vel iure quaerat non accusantium molestias et laboriosam totam et repudiandae aspernatur. Eos vitae illo qui laborum similique eum distinctio nulla. Ut consequatur architecto a Quis reprehenderit in sapiente veritatis est aperiam error ut similique doloremque.
-                                            Non ipsa tenetur hic sint veniam in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                            <li>Lorem ipsum dolor sit amet. Est voluptatem laudantium rem necessitatibus assumenda At quia delectus. In internos libero sit quia tempora est placeat distinctio aut quae nostrum ea vero ullam aut aliquid optio est rerum quia.
-                                            Qui quaerat consequuntur et unde neque est quia magnam quo rerum explicabo 33 incidunt dicta vel quam adipisci. Est earum laborum qui galisum obcaecati est eveniet libero vel iure quaerat non accusantium molestias et laboriosam totam et repudiandae aspernatur. Eos vitae illo qui laborum similique eum distinctio nulla. Ut consequatur architecto a Quis reprehenderit in sapiente veritatis est aperiam error ut similique doloremque.
-                                            Non ipsa tenetur hic sint veniam in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                            <li>Lorem ipsum dolor sit amet. Est voluptatem laudantium rem necessitatibus assumenda At quia delectus. In internos libero sit quia tempora est placeat distinctio aut quae nostrum ea vero ullam aut aliquid optio est rerum quia.
-                                            Qui quaerat consequuntur et unde neque est quia magnam quo rerum explicabo 33 incidunt dicta vel quam adipisci. Est earum laborum qui galisum obcaecati est eveniet libero vel iure quaerat non accusantium molestias et laboriosam totam et repudiandae aspernatur. Eos vitae illo qui laborum similique eum distinctio nulla. Ut consequatur architecto a Quis reprehenderit in sapiente veritatis est aperiam error ut similique doloremque.
-                                            Non ipsa tenetur hic sint veniam in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                            </ol>
-                                            <br/>
+                                            <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
+                                            <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
+                                            <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
+                                        </ol>
+                                        <br />
                                     </div>
                                     <div className="appTwo">
-                                    <h7>App Name 2 | App Type</h7>
+                                        <h7>App Name 2 | App Type</h7>
                                         <br />
                                         <h7>App date</h7><br />
                                         <ol>
-                                            <li>Lorem ipsum dolor sit amet. Est voluptatem laudantium rem necessitatibus assumenda At quia delectus. In internos libero sit quia tempora est placeat distinctio aut quae nostrum ea vero ullam aut aliquid optio est rerum quia.
-                                            Qui quaerat consequuntur et unde neque est quia magnam quo rerum explicabo 33 incidunt dicta vel quam adipisci. Est earum laborum qui galisum obcaecati est eveniet libero vel iure quaerat non accusantium molestias et laboriosam totam et repudiandae aspernatur. Eos vitae illo qui laborum similique eum distinctio nulla. Ut consequatur architecto a Quis reprehenderit in sapiente veritatis est aperiam error ut similique doloremque.
-                                            Non ipsa tenetur hic sint veniam in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                            <li>Lorem ipsum dolor sit amet. Est voluptatem laudantium rem necessitatibus assumenda At quia delectus. In internos libero sit quia tempora est placeat distinctio aut quae nostrum ea vero ullam aut aliquid optio est rerum quia.
-                                            Qui quaerat consequuntur et unde neque est quia magnam quo rerum explicabo 33 incidunt dicta vel quam adipisci. Est earum laborum qui galisum obcaecati est eveniet libero vel iure quaerat non accusantium molestias et laboriosam totam et repudiandae aspernatur. Eos vitae illo qui laborum similique eum distinctio nulla. Ut consequatur architecto a Quis reprehenderit in sapiente veritatis est aperiam error ut similique doloremque.
-                                            Non ipsa tenetur hic sint veniam in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                            <li>Lorem ipsum dolor sit amet. Est voluptatem laudantium rem necessitatibus assumenda At quia delectus. In internos libero sit quia tempora est placeat distinctio aut quae nostrum ea vero ullam aut aliquid optio est rerum quia.
-                                            Qui quaerat consequuntur et unde neque est quia magnam quo rerum explicabo 33 incidunt dicta vel quam adipisci. Est earum laborum qui galisum obcaecati est eveniet libero vel iure quaerat non accusantium molestias et laboriosam totam et repudiandae aspernatur. Eos vitae illo qui laborum similique eum distinctio nulla. Ut consequatur architecto a Quis reprehenderit in sapiente veritatis est aperiam error ut similique doloremque.
-                                            Non ipsa tenetur hic sint veniam in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                            </ol>
-                                            <br/>
+                                            <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
+                                            <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
+                                            <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
+                                        </ol>
+                                        <br />
                                     </div>
                                     <br />
                                     <div className="appThree">
-                                    <h7>App Name 3 | App Type</h7>
+                                        <h7>App Name 3 | App Type</h7>
                                         <br />
                                         <h7>App date</h7><br />
                                         <ol>
-                                            <li>Lorem ipsum dolor sit amet. Est voluptatem laudantium rem necessitatibus assumenda At quia delectus. In internos libero sit quia tempora est placeat distinctio aut quae nostrum ea vero ullam aut aliquid optio est rerum quia.
-                                            Qui quaerat consequuntur et unde neque est quia magnam quo rerum explicabo 33 incidunt dicta vel quam adipisci. Est earum laborum qui galisum obcaecati est eveniet libero vel iure quaerat non accusantium molestias et laboriosam totam et repudiandae aspernatur. Eos vitae illo qui laborum similique eum distinctio nulla. Ut consequatur architecto a Quis reprehenderit in sapiente veritatis est aperiam error ut similique doloremque.
-                                            Non ipsa tenetur hic sint veniam in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                            <li>Lorem ipsum dolor sit amet. Est voluptatem laudantium rem necessitatibus assumenda At quia delectus. In internos libero sit quia tempora est placeat distinctio aut quae nostrum ea vero ullam aut aliquid optio est rerum quia.
-                                            Qui quaerat consequuntur et unde neque est quia magnam quo rerum explicabo 33 incidunt dicta vel quam adipisci. Est earum laborum qui galisum obcaecati est eveniet libero vel iure quaerat non accusantium molestias et laboriosam totam et repudiandae aspernatur. Eos vitae illo qui laborum similique eum distinctio nulla. Ut consequatur architecto a Quis reprehenderit in sapiente veritatis est aperiam error ut similique doloremque.
-                                            Non ipsa tenetur hic sint veniam in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                            <li>Lorem ipsum dolor sit amet. Est voluptatem laudantium rem necessitatibus assumenda At quia delectus. In internos libero sit quia tempora est placeat distinctio aut quae nostrum ea vero ullam aut aliquid optio est rerum quia.
-                                            Qui quaerat consequuntur et unde neque est quia magnam quo rerum explicabo 33 incidunt dicta vel quam adipisci. Est earum laborum qui galisum obcaecati est eveniet libero vel iure quaerat non accusantium molestias et laboriosam totam et repudiandae aspernatur. Eos vitae illo qui laborum similique eum distinctio nulla. Ut consequatur architecto a Quis reprehenderit in sapiente veritatis est aperiam error ut similique doloremque.
-                                            Non ipsa tenetur hic sint veniam in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                            </ol>
-                                            <br/>
+                                            <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
+                                            <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
+                                            <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
+                                        </ol>
+                                        <br />
                                     </div>
                                 </div>
                                 <br />
@@ -181,7 +161,7 @@ const MyResumes = () => {
                                         <li>300+</li>
                                     </ol>
                                 </div>
-                            </Col>
+                            </div>
                         </div>
                     </div>
                 </Row>
