@@ -54,4 +54,25 @@ router.post('/createresume', requireLogin, async (req, res) => {
     }
 })
 
+router.delete('/deleteresume/:resumeId', requireLogin, (req, res) => {
+    Resume.findOne({ _id: req.params.resumeId })
+        .populate("createBy", "id")
+        .exec((err, resume) => {
+            if (err || !resume) {
+                return res.status(422).json({ error: err })
+            }
+            if (resume.postedBy._id.toString() === req.user._id.toString()) {
+                resume.remove()
+                    .then(result => {
+                        console.log(result)
+                        res.json(result)
+                    }).catch(err => {
+                        console.log(err)
+                    })
+            }
+        })
+})
+
+
+
 module.exports = router
