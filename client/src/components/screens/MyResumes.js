@@ -7,7 +7,7 @@ const MyResumes = () => {
         <div>
             <Container>
                 <Row>
-                    <div className="card">
+                    <div className="card resumeCard">
                         <Col className="heading">
                             <h3 className="heading">Anuj Patidar</h3>
                         </Col>
