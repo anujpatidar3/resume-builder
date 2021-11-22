@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <Container>
             <Row>
-                <Col sm={12} lg={4}>
+                <Col sm={12} md={6} lg={4}>
                     <div className="card homeCard">
                         <div className="card-content">
                             <span className="card-title headingStyle"><Link className="linkStyle" to='/createresume'>CREATE A RESUME</Link></span>
@@ -15,7 +15,7 @@ const Home = () => {
                         </div>
                     </div>
                 </Col>
-                <Col sm={12} lg={4}>
+                <Col sm={12} md={6} lg={4}>
                     <div className="card homeCard">
                         <div className="card-content">
                             <span className="card-title headingStyle"><Link className="linkStyle" to='/myresumes'>SHOW MY RESUMES</Link></span>
@@ -23,7 +23,7 @@ const Home = () => {
                         </div>
                     </div>
                 </Col>
-                <Col sm={12} lg={4}>
+                <Col sm={12} md={6} lg={4}>
                     <div className="card homeCard">
                         <div className="card-content">
                             <span className="card-title headingStyle"><Link className="linkStyle" to='/editresume'>EDIT RESUME</Link></span>

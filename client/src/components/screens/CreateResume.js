@@ -9,8 +9,9 @@ const CreateResume = () => {
             <Row>
                 <Col sm={12} md={6} lg={4}>
                     <div className="card ">
-                        <div style={{ margin: "10px" }}>
-                            <h1 className="personal">Personal Information</h1>
+
+                        <div style={{margin:"10px"}}>
+                        <h1 className="personal">Personal Information</h1>
                             <input
                                 type="text"
                                 placeholder="Name*"
@@ -30,29 +31,6 @@ const CreateResume = () => {
                                 type="text"
                                 placeholder="Major Course Name*"
                                 required
-                            />
-                            <input
-                                type="text"
-                                placeholder="Minor Course Name"
-                            />
-                            <input
-                                type="text"
-                                placeholder="Graduation Year*"
-                                required
-                            />
-                            <input
-                                type="text"
-                                placeholder="Institue Location*"
-                                required
-                            />
-                            <input
-                                type="text"
-                                placeholder="CGPA or Percentage*"
-                                required
-                            />
-                            <input
-                                type="text"
-                                placeholder="Minor Course Name"
                             />
                             <input
                                 type="text"
