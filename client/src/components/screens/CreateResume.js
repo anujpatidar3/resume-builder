@@ -9,8 +9,9 @@ const CreateResume = () => {
             <Row>
                 <Col sm={12} md={6} lg={4}>
                     <div className="card ">
+
                         <div style={{margin:"10px"}}>
-                            <h1 className="personal">Personal Information</h1>
+                        <h1 className="personal">Personal Information</h1>
                             <input
                                 type="text"
                                 placeholder="Name*"
