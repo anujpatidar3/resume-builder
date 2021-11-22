@@ -20,8 +20,14 @@
 
 .firstColumn{
     max-width: 200px;
+    margin-right: 10px;
 }
 
 .instituteTwo{
     margin-top: 20px;
+}
+
+.columns{
+    display: flex;  
+    flex-direction: row; 
 }
