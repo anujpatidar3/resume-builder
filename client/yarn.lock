@@ -9867,6 +9867,11 @@
   "resolved" "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz"
   "version" "3.0.4"
 
+"react-multi-carousel@^2.6.5":
+  "integrity" "sha512-i5iuAm5XRT/h7uBL9/pGWeRsQXzqvjBrPVP1sobKgDKEvfZuKFpYp/alaQhTRM56Jtkb8jZpSqLn52Ku6jJbDg=="
+  "resolved" "https://registry.npmjs.org/react-multi-carousel/-/react-multi-carousel-2.6.5.tgz"
+  "version" "2.6.5"
+
 "react-popper@^2.2.4":
   "integrity" "sha512-kxGkS80eQGtLl18+uig1UIf9MKixFSyPxglsgLBxlYnyDf65BiY9B3nZSc6C9XUNDgStROB0fMQlTEz1KxGddw=="
   "resolved" "https://registry.npmjs.org/react-popper/-/react-popper-2.2.5.tgz"
