@@ -49,13 +49,14 @@ const MyResumes = () => {
     return (
         <Carousel
             swipeable={true}
-            draggable={true}
-            showDots={true}
+            draggable={false}
+            showDots={false}
             responsive={responsive}
             ssr={false}
+            sliderClass = {'react-multi-carousel-list'}
             infinite={true}
             keyBoardControl={true}
-            customTransition="all .5"
+            customTransition= 'transform 300ms ease-in-out'
             transitionDuration={500}
             containerClass="carousel-container"
             removeArrowOnDeviceType={["tablet", "mobile"]}
