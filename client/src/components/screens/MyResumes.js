@@ -66,7 +66,8 @@ const MyResumes = () => {
             containerClass="carousel-container"
             removeArrowOnDeviceType={["tablet", "mobile"]}
             dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-40-px">
+            itemClass="carousel-item-padding-40-px"
+            >
             {
                 data.map(myResume => {
                     return (
