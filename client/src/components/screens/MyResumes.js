@@ -53,15 +53,16 @@ const MyResumes = () => {
             showDots={false}
             responsive={responsive}
             ssr={false}
-            sliderClass = {'react-multi-carousel-list'}
+            sliderClass={'react-multi-carousel-list'}
             infinite={true}
             keyBoardControl={true}
-            customTransition= 'transform 300ms ease-in-out'
+            customTransition='transform 300ms ease-in-out'
             transitionDuration={500}
             containerClass="carousel-container"
             removeArrowOnDeviceType={["tablet", "mobile"]}
             dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-40-px">
+            itemClass="carousel-item-padding-40-px"
+            >
             {
                 data.map(myResume => {
                     return (
