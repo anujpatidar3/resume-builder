@@ -9,11 +9,13 @@ Clone down this repository. You will need `node` and `npm` installed globally on
 
 Installation:
 
-`npm install`   
+* Client side: `npm install`   
+* Server side: `npm install`
 
 To Start App:
 
-`npm run dev`  
+* Client side: `npm start`
+* Server side: `node app.js`
 
 To Visit App:
 
