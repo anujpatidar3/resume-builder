@@ -2,16 +2,23 @@ import React, { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './navbar.css'
 import { UserContext } from '../../App'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
 const NavBar = () => {
+    const navigate = useNavigate();
     const { state, dispatch } = useContext(UserContext)
 
     const renderList = () => {
         if (state) {
             return [
-                <li><Link to="/" className="logOutButton">Logout</Link></li>
+                <li><Link to="/signin" className="logOutButton"
+                    onClick={() => {
+                        navigate('/signin')
+                        localStorage.clear()
+                        dispatch({ type: "CLEAR" })
+                    }}
+                >Logout</Link></li>
             ]
         } else {
             return [
@@ -25,9 +32,9 @@ const NavBar = () => {
         <nav className="navbarStyling">
             <div className="nav-wrapper">
                 <Container>
-                    <Link to={state?"/":"/signin"} className="logoStyle left">Resume Builder</Link>
+                    <Link to={state ? "/" : "/signin"} className="logoStyle left">Resume Builder</Link>
                     <ul id="nav-mobile" className="right">
-                    {renderList()}
+                        {renderList()}
                     </ul>
                 </Container>
             </div>
