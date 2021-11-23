@@ -86,7 +86,15 @@ const MyResumes = () => {
                                             <br />
                                             <div className="links">
                                                 <h5>Links</h5>
-                                                Github:// sampleGithubLink<br />
+                                                {
+                                                    resume.githubProfile !== "" &&
+                                                    resume.githubProfile
+                                                }
+                                                <br />
+                                                {
+                                                    resume.linkedInProfile !== "" &&
+                                                    resume.linkedInProfile
+                                                }
                                                 Linkedin:// sampleLinkedinLink<br />
                                                 Hackerrank:// sampleHackerrankLink<br />
                                                 Codechef:// sampleCodechefLink<br />
@@ -117,15 +125,6 @@ const MyResumes = () => {
                                                 <ol>
                                                     <li>SQL</li>
                                                     <li>MySQL</li>
-                                                </ol>
-                                                <h6>Soft Skills</h6>
-                                                <ol>
-                                                    <li>Strong</li>
-                                                    <li>Leadership</li>
-                                                    <li>Calmness</li>
-                                                    <li>Public Speaking</li>
-                                                    <li>Resourcefulness</li>
-                                                    <li>Goal-Oriented</li>
                                                 </ol>
                                             </div>
                                         </div>
