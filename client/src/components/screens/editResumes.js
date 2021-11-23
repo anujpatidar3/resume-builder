@@ -104,13 +104,70 @@ const EditResumes = () => {
        setEmailID(data.emailID)
        setName(data.name)
        setInstituteName(data.instituteName)
+       setMajorCourseName(data.majorCourseName)
+       setMinorCourseName(data.minorCourseName)
+       setGraduationYear(data.setGraduationYear)
+       setInstituteLocation(data.instituteLocation)
+       setCGPA(data.CGPA)
+
+       setInsituteName2(data.instituteNameSecond)
+       setMajorCourseName2(data.majorCourseNameSecond)
+       setMinorCourseName2(data.minorCourseNameSecond)
+       setGraduationYear2(data.setGraduationYear2)
+       setInsituteLocation2(data.instituteLocationSecond)
+       setCGPA2(data.CGPASecond)
+
        
+       setCourseSubject(data.courseWorkSubjectsOne)
+       setCourseSubject2(data.courseWorkSubjectsTwo)
+       setCourseSubject3(data.courseWorkSubjectsThree)
+       setCOurseSubject4(data.courseWorkSubjectsFour)
+       setCourseSubject5(data.courseWorkSubjectsFive)
+
+
+       setProgrammingLanguage(data.programmingLanguagesOne)
+       setProgrammingLanguage2(data.programmingLanguagesTwo)
+       setProgrammingLanguage3(data.programmingLanguagesThree)
+       setProgrammingLanguage4(data.programmingLanguagesFour)
+       setProgrammingLanguage5(data.programmingLanguagesFive)
+
+       setDevelopmentSkill(data.developmentOne)
+       setDevelopmentSkill2(data.developmentTwo)
+       setDevelopmentSkill3(data.developmentThree)
+       setDevelopmentSkill4(data.developmentFour)
+       setDevelopmentSkill5(data.developmentFive)
+
+       setTechnologicalSkill(data.technologyOne)
+       setTechnologicalSkill2(data.technologyTwo)
+       setTechnologicalSkill3(data.technologyThree)
+       setTechnologicalSkill4(data.technologyFour)
+       setTechnologicalSkill5(data.technologyFive)
+
+       setDatabaseSkill(data.databaseOne)
+       setDatabaseSkill2(data.databaseTwo)
+       setDatabaseSkill3(data.databaseThree)
+       setDatabaseSkill4(data.databaseFour)
+       setDatabaseSkill5(data.databaseFive)
+
+       setAchievement(data.achievementsOne)
+       setAchievement2(data.achievementsTwo)
+       setAchievement3(data.achievementsThree)
+
+
+       setPosition(data.positionsofRespobsibility)
+       setPositionDescription(data.positionDescription)
+
+
+
+
        setGithubProfile(data.githubProfile)
        setLinkedinProfile(data.linkedInProfile)
        setHackerrankProfile(data.hackerrankProfile)
        setCodechefProfile(data.codechefProfile)
        setTwitterProfile(data.twitterProfile)
        setPortfolioLink(data.PortfolioProfile)
+
+       
        setProjectName(data.firstProjectName)
        setProjectDescription(data.firstProjectDescription)
        setProjectName2(data.secondProjectName)
