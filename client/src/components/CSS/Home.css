@@ -1,17 +1,17 @@
 .linkStyle{
-    text-decoration: none;
-    font-size:120%;
-    font-weight: 500;
+    text-decoration: none!important;
+    text-align: center;
 }
 
 .headingStyle{
-    text-align: center;
+   font-size: 150%!important;
+   font-weight: 400!important;
 }
 
 .homeCard{
     align-self: center;
-    height: 210px!important;
-    width: auto;
+    height: 230px!important;
+    width: 370px;
     margin-left: auto!important;
     margin-right: auto!important;
     margin-top: 20%;
@@ -27,9 +27,6 @@
 
 .homeText{
     font-size: 120%;
-    font-weight: 400;
-}
-
-.homeText:hover{
-    cursor: pointer;
+    font-weight: 300;
+    color: black!important;;
 }

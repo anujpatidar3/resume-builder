@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
+import {UserContext} from '../../App'
 import { Container, Row, Col } from 'react-bootstrap'
 import '../CSS/SignIn.css'
 import { Link, useNavigate } from 'react-router-dom';
@@ -6,6 +7,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const SignIn = () => {
+    const {state,dispatch}=useContext(UserContext)
     const navigate = useNavigate();
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -16,10 +18,9 @@ const SignIn = () => {
             return
         }
         fetch("/signin", {
-            method: "Post",
+            method: "post",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization":"Bearer "+localStorage.getItem("jwt")
             },
             body: JSON.stringify({
                 email,
@@ -34,6 +35,7 @@ const SignIn = () => {
                 } else {
                     localStorage.setItem("jwt",JSON.stringify(data.token))
                     localStorage.setItem("user",JSON.stringify(data.user))
+                    dispatch({type:"USER",payload:data.user})
                     toast("Signed In Successfully",
                         { position: toast.POSITION.TOP_RIGHT })
                     navigate('/')

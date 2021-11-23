@@ -4,9 +4,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = mongoose.model("User");
-const Temp = mongoose.model("Temp");
 const {JWT_SECRET}=require('../keys')
-const requireLogin =require('../middleware/requireLogin')
 
 
 router.post('/signup',  (req, res) => {
@@ -38,12 +36,12 @@ router.post('/signup',  (req, res) => {
         })
 })
 
-router.post('/signin', async (req, res) => {
+router.post('/signin',  (req, res) => {
     const { email, password } = req.body;
     if (!email || !password) {
         res.status(422).json({ error: "Please Provide email or password" });
     }
-    await User.findOne({ email: email })
+     User.findOne({ email: email })
         .then(savedUser => {
             if (!savedUser) {
                 return res.status(422).json({ error: "Invalid Email ID or Password" })

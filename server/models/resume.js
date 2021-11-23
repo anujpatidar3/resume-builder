@@ -10,7 +10,7 @@ const resumeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    institueName: {
+    instituteName: {
         type: String,
         required: true
     },
@@ -25,7 +25,7 @@ const resumeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    institueLocation: {
+    instituteLocation: {
         type: String,
         required: true
     },
@@ -33,7 +33,7 @@ const resumeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    institueNameSecond: {
+    instituteNameSecond: {
         type: String,
     },
     majorCourseNameSecond: {
@@ -45,7 +45,7 @@ const resumeSchema = new mongoose.Schema({
     gradutionMonthAndYearSecond: {
         type: String,
     },
-    institueLocationSecond: {
+    instituteLocationSecond: {
         type: String,
     },
     CGPASecond: {
@@ -102,13 +102,13 @@ const resumeSchema = new mongoose.Schema({
     developmentOne: {
         type: String,
     },
-     developmentTwo: {
+    developmentTwo: {
         type: String,
     },
-     developmentThree: {
+    developmentThree: {
         type: String,
     },
-     developmentFour: {
+    developmentFour: {
         type: String,
     },
     developmentFive: {

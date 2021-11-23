@@ -1,19 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './navbar.css'
+import { UserContext } from '../../App'
 import { Link } from 'react-router-dom';
-import { Container} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 const NavBar = () => {
+    const { state, dispatch } = useContext(UserContext)
+
+    const renderList = () => {
+        if (state) {
+            return [
+                <li><Link to="/" className="logOutButton">Log Out</Link></li>
+            ]
+        } else {
+            return [
+                <li><Link to="/signin" className="logOutButton">Sign In</Link></li>,
+                <li><Link to="/signup" className="logOutButton">Sign Up</Link></li>
+            ]
+        }
+    }
+
     return (
         <nav className="navbarStyling">
             <div className="nav-wrapper">
                 <Container>
-                    <Link to="/" className="logoStyle left">Resume Builder</Link>
+                    <Link to={state?"/":"/signin"} className="logoStyle left">Resume Builder</Link>
                     <ul id="nav-mobile" className="right">
-                        <li><Link to="/signin" className="logOutButton">Sign In</Link></li>
-                        <li><Link to="/signup" className="logOutButton">Sign Up</Link></li>
-                        <li><Link to="/" className="logOutButton">Log Out</Link></li>
+                    {renderList()}
                     </ul>
                 </Container>
             </div>

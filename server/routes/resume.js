@@ -4,12 +4,12 @@ const mongoose = require('mongoose');
 const requireLogin = require('../middleware/requireLogin')
 const Resume = mongoose.model("Resume")
 
-router.get('/allresumes',requireLogin, async (req, res) => {
+router.get('/allresumes',requireLogin,  (req, res) => {
     try {
-        await Resume.find()
+        Resume.find()
         .populate("createdBy","_id name")
-        .then(posts=>{
-          res.json({posts})
+        .then(resume=>{
+          res.json({resume})
         })
     }
     catch(error){
@@ -18,12 +18,12 @@ router.get('/allresumes',requireLogin, async (req, res) => {
     }
 })
 
-router.get('/myresumes',requireLogin, async (req, res) => {
+router.get('/myresumes',requireLogin,  (req, res) => {
     try {
-        await Resume.find({createdBy:req.user._id})
+        Resume.find({createdBy:req.user._id})
         .populate("createdBy","_id name")
-        .then(myPosts=>{
-          res.json({myPosts})
+        .then(myResume=>{
+          res.json({myResume})
         })
     }
     catch(error){
@@ -32,26 +32,18 @@ router.get('/myresumes',requireLogin, async (req, res) => {
     }
 })
 
-router.post('/createresume', requireLogin, async (req, res) => {
-    try {
-        const { name, emailID, institueName, majorCourseName, minorCourseNam, gradutionMonthAndYear, institueLocation, CGPA, institueNameSecond, majorCourseNameSecond, minorCourseNameSecond, gradutionMonthAndYearSecond, institueLocationSecond, CGPASecond, githubProfile, linkedInProfile, hackerrankProfile, codechefProfile, twitterProfile, PortfolioProfile, courseWorkSubjectsOne, courseWorkSubjectsTwo, courseWorkSubjectsThree, courseWorkSubjectsFour, courseWorkSubjectsFive, technologyOne, technologyTwo, technologyThree, technologyFour, technologyFive, developmentOne ,developmentTwo ,developmentThree, developmentFour, developmentFive, programmingLanguagesOne, programmingLanguagesTwo, programmingLanguagesThree, programmingLanguagesFour, programmingLanguagesFive, databaseOne, databaseTwo, databaseThree, databaseFour, databaseFive, achievementsOne, achievementsTwo, achievementsThree, firstProjectName, firstProjectDescription, secondProjectName, secondProjectDescription, thirdProjectName, thirdProjectDescription, positionsofRespobsibility, positionDescription, createdBy } = req.body;
-        if (!name || !emailID || !institueName || !majorCourseName || !minorCourseNam || !gradutionMonthAndYear || !institueLocation || !CGPA || !firstProjectName || !firstProjectDescription || !secondProjectName || !secondProjectDescription ) {
+router.post('/createresume', requireLogin, (req, res,next) => {
+        const { name, emailID, instituteName, majorCourseName, minorCourseName, gradutionMonthAndYear, instituteLocation, CGPA, instituteNameSecond, majorCourseNameSecond, minorCourseNameSecond, gradutionMonthAndYearSecond, instituteLocationSecond, CGPASecond, githubProfile, linkedInProfile, hackerrankProfile, codechefProfile, twitterProfile, PortfolioProfile, courseWorkSubjectsOne, courseWorkSubjectsTwo, courseWorkSubjectsThree, courseWorkSubjectsFour, courseWorkSubjectsFive, technologyOne, technologyTwo, technologyThree, technologyFour, technologyFive, developmentOne ,developmentTwo ,developmentThree, developmentFour, developmentFive, programmingLanguagesOne, programmingLanguagesTwo, programmingLanguagesThree, programmingLanguagesFour, programmingLanguagesFive, databaseOne, databaseTwo, databaseThree, databaseFour, databaseFive, achievementsOne, achievementsTwo, achievementsThree, firstProjectName, firstProjectDescription, secondProjectName, secondProjectDescription, thirdProjectName, thirdProjectDescription, positionsofRespobsibility, positionDescription } = req.body;
+        if (!name || !emailID || !instituteName || !majorCourseName || !gradutionMonthAndYear || !instituteLocation || !CGPA || !firstProjectName || !firstProjectDescription || !secondProjectName || !secondProjectDescription ) {
             return res.status(422).json({ error: "Please Add All the Fields" })
         }
-        req.user.password = undefined
         const resume = new Resume({
-            name, emailID, institueName, majorCourseName, minorCourseNam, gradutionMonthAndYear, institueLocation, CGPA, institueNameSecond, majorCourseNameSecond, minorCourseNameSecond, gradutionMonthAndYearSecond, institueLocationSecond, CGPASecond, githubProfile, linkedInProfile, hackerrankProfile, codechefProfile, twitterProfile, PortfolioProfile, courseWorkSubjectsOne, courseWorkSubjectsTwo, courseWorkSubjectsThree, courseWorkSubjectsFour, courseWorkSubjectsFive, technologyOne, technologyTwo, technologyThree, technologyFour, technologyFive, developmentOne ,developmentTwo ,developmentThree, developmentFour, developmentFive, programmingLanguagesOne, programmingLanguagesTwo, programmingLanguagesThree, programmingLanguagesFour, programmingLanguagesFive, databaseOne, databaseTwo, databaseThree, databaseFour, databaseFive, achievementsOne, achievementsTwo, achievementsThree, firstProjectName, firstProjectDescription, secondProjectName, secondProjectDescription, thirdProjectName, thirdProjectDescription, positionsofRespobsibility, positionDescription,
+            name, emailID, instituteName, majorCourseName, minorCourseName, gradutionMonthAndYear, instituteLocation, CGPA, instituteNameSecond, majorCourseNameSecond, minorCourseNameSecond, gradutionMonthAndYearSecond, instituteLocationSecond, CGPASecond, githubProfile, linkedInProfile, hackerrankProfile, codechefProfile, twitterProfile, PortfolioProfile, courseWorkSubjectsOne, courseWorkSubjectsTwo, courseWorkSubjectsThree, courseWorkSubjectsFour, courseWorkSubjectsFive, technologyOne, technologyTwo, technologyThree, technologyFour, technologyFive, developmentOne ,developmentTwo ,developmentThree, developmentFour, developmentFive, programmingLanguagesOne, programmingLanguagesTwo, programmingLanguagesThree, programmingLanguagesFour, programmingLanguagesFive, databaseOne, databaseTwo, databaseThree, databaseFour, databaseFive, achievementsOne, achievementsTwo, achievementsThree, firstProjectName, firstProjectDescription, secondProjectName, secondProjectDescription, thirdProjectName, thirdProjectDescription, positionsofRespobsibility, positionDescription,
             createdBy: req.user
         })
         resume.save().then(result => {
             res.json({ resume: result })
         })
-    }
-    catch (error) {
-        console.log(error)
-        res.status(500).json("Error")
-
-    }
 })
 
 router.delete('/deleteresume/:resumeId', requireLogin, (req, res) => {
