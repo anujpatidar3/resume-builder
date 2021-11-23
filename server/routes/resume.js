@@ -46,6 +46,10 @@ router.post('/createresume', requireLogin, (req, res,next) => {
         })
 })
 
+router.post('/editresume',requireLogin,(req,res)=>{
+   
+})
+
 router.delete('/deleteresume/:resumeId', requireLogin, (req, res) => {
     Resume.findOne({ _id: req.params.resumeId })
         .populate("createBy", "id")

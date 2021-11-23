@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import '../CSS/resumeTempOne.css'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -42,6 +43,10 @@ const MyResumes = () => {
             })
     }, [])
 
+    const editData = (resume) => {
+        localStorage.setItem("resume",JSON.stringify(resume))
+    }
+
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
     });
@@ -53,10 +58,10 @@ const MyResumes = () => {
             showDots={false}
             responsive={responsive}
             ssr={false}
-            sliderClass = {'react-multi-carousel-list'}
+            sliderClass={'react-multi-carousel-list'}
             infinite={true}
             keyBoardControl={true}
-            customTransition= 'transform 300ms ease-in-out'
+            customTransition='transform 300ms ease-in-out'
             transitionDuration={500}
             containerClass="carousel-container"
             removeArrowOnDeviceType={["tablet", "mobile"]}
@@ -349,6 +354,7 @@ const MyResumes = () => {
                                         </div>
                                     </div>
                                     <button className="btn btn-primary" onClick={handlePrint}>Print</button>
+                                    <Link to='/editresume'><button className="btn btn-primary" onClick={() => editData(myResume)}>Edit</button></Link>
                                 </Row>
                             </Container>
                         </div>
