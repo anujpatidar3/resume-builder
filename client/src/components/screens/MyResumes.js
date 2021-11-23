@@ -16,8 +16,8 @@ const MyResumes = () => {
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
-            items: 2,
-            slidesToSlide: 2 // optional, default to 1.
+            items: 1,
+            slidesToSlide: 1 // optional, default to 1.
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
@@ -39,13 +39,14 @@ const MyResumes = () => {
     return (
         <Carousel
             swipeable={true}
-            draggable={true}
-            showDots={true}
+            draggable={false}
+            showDots={false}
             responsive={responsive}
             ssr={false}
+            sliderClass = {'react-multi-carousel-list'}
             infinite={true}
             keyBoardControl={true}
-            customTransition="all .5"
+            customTransition= 'transform 300ms ease-in-out'
             transitionDuration={500}
             containerClass="carousel-container"
             removeArrowOnDeviceType={["tablet", "mobile"]}
