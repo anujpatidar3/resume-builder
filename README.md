@@ -23,14 +23,14 @@ To Visit App:
 
 
 ## Technologies Used
-* [HTML](https://devdocs.io/html/): It is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables.
-* [CSS](https://devdocs.io/css/): It is a style sheet language which is used to describe the look and formatting of a document written in markup language.
-* [React.Js](https://github.com/reactjs/reactjs.org "Reactjs") : It's a front end library used for handling the view layer for web applications.
-* [Node.Js](https://github.com/nodejs/node "NodeJs"): It is primarily used for non-blocking, event-driven servers, due to its single-threaded nature.
-* [Express.Js](https://expressjs.com/en/5x/api.html): Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
-* [MongoDB](https://docs.mongodb.com/ "MongoDB"): MongoDB is a database tool that can manage document-oriented information, store or retrieve information.
-* [Redux](https://github.com/reduxjs/redux "Redux"): Redux is the root file which is responsible for the creation of store and rendering our react app component.
-* [Javascript](https://devdocs.io/javascript/): JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive.
+* [HTML](https://devdocs.io/html/): It is the code that is used to structure a web page and its content.
+* [CSS](https://devdocs.io/css/): It is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.
+* [React.Js](https://github.com/reactjs/reactjs.org "Reactjs") : It makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
+* [Node.Js](https://github.com/nodejs/node "NodeJs"): It is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
+* [Express.Js](https://expressjs.com/en/5x/api.html): It is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+* [MongoDB](https://docs.mongodb.com/ "MongoDB"): It is a document database with the scalability and flexibility that you want with the querying and indexing that you need
+* [Redux](https://github.com/reduxjs/redux "Redux"): It helps us to write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.
+* [Javascript](https://devdocs.io/javascript/): It is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive.
 
 
 # Team Members
