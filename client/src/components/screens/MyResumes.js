@@ -69,22 +69,21 @@ const MyResumes = () => {
                                         <div className="firstColumn">
                                             <div>
                                                 <h5>Education</h5>
-                                                <div>
+                                                <div className="educationOne">
                                                     <h7>{resume.instituteName}</h7>
-                                                    <br />
-                                                    <h7>{resume.majorCourseName}</h7><br />
-                                                    <h7>{resume.minorCourseName}</h7><br />
-                                                    <h7>{resume.gradutionMonthAndYear}</h7><br />
-                                                    <h7>{resume.institueLocation}</h7><br />
-                                                    <h7>{resume.CGPA}</h7><br />
+                                                    <h7>{resume.majorCourseName}</h7>
+                                                    <h7>{resume.minorCourseName}</h7>
+                                                    <h7>{resume.gradutionMonthAndYear}</h7>
+                                                    <h7>{resume.institueLocation}</h7>
+                                                    <h7>{resume.CGPA}</h7>
                                                 </div>
                                                 <div className="instituteTwo">
-                                                    <h7>
+                                                    <h6>
                                                         {
                                                             resume.instituteNameSecond !== "" &&
                                                             resume.instituteNameSecond
                                                         }
-                                                    </h7>
+                                                    </h6>
                                                     <h7>
                                                         {resume.majorCourseNameSecond !== "" &&
                                                             resume.majorCourseNameSecond
@@ -114,121 +113,225 @@ const MyResumes = () => {
                                                             resume.CGPASecond
                                                         }</h7>
                                                 </div>
-                                                <br />
-
                                             </div>
-                                            <br />
-                                            <div className="links">
-                                                <h5>Links</h5>
-                                                {
-                                                    resume.githubProfile !== "" &&
-                                                    resume.githubProfile
-                                                }
-                                                <br />
-                                                {
-                                                    resume.linkedInProfile !== "" &&
-                                                    resume.linkedInProfile
-                                                }
-                                                Linkedin:// sampleLinkedinLink<br />
-                                                Hackerrank:// sampleHackerrankLink<br />
-                                                Codechef:// sampleCodechefLink<br />
-                                            </div>
-                                            <br />
-                                            <div className="skills">
-                                                <h5>Skills</h5>
-                                                <h6>Technical Skills</h6>
-                                                <h7>Technologies</h7>
-                                                <ol>
-                                                    <li>competitive programming</li>
-                                                    <li>development</li>
-                                                    <li>Git</li>
-                                                </ol>
-                                                <h7>Development</h7>
-                                                <ol>
-                                                    <li>Web</li>
-                                                    <li>Android</li>
-                                                    <li>React Native</li>
-                                                </ol>
-                                                <h7>Languages</h7>
-                                                <ol>
-                                                    <li>C++</li>
-                                                    <li>Java</li>
-                                                    <li>Python</li>
-                                                </ol>
-                                                <h7>Databases</h7>
-                                                <ol>
-                                                    <li>SQL</li>
-                                                    <li>MySQL</li>
-                                                </ol>
-                                            </div>
+                                            {
+                                                resume.githubProfile !== "" ||
+                                                    resume.linkedInProfile !== "" ||
+                                                    resume.hackerrankProfile !== "" ||
+                                                    resume.codechefProfile !== "" ||
+                                                    resume.twitterProfile !== "" ?
+                                                    <div>
+                                                        <div className="links">
+                                                            <h5 className="linkHeader">Links</h5>
+                                                            {
+                                                                resume.githubProfile !== "" ? <a className="linksItem" href={resume.githubProfile}>Github</a> : ""
+                                                            }
+                                                            {
+                                                                resume.linkedInProfile !== "" ? <a className="linksItem" href={resume.linkedInProfile}>Linkedin</a> : ""
+                                                            }
+                                                            {
+                                                                resume.hackerrankProfile !== "" ? <a className="linksItem" href={resume.hackerrankProfile}>Hackerrank</a> : ""
+                                                            }
+                                                            {
+                                                                resume.codechefProfile !== "" ? <a className="linksItem" href={resume.codechefProfile}>Codechef</a> : ""
+                                                            }
+                                                            {
+                                                                resume.twitterProfile !== "" ? <a className="linksItem" href={resume.twitterProfile}>Twitter</a> : ""
+                                                            }
+                                                        </div>
+                                                    </div> : ""
+                                            }
+                                            {
+                                                resume.achievementsOne !== "" || resume.achievementsTwo !== "" || resume.achievementsThree !== "" ?
+                                                    <div className="achievements">
+                                                        <h5>Achievements</h5>
+                                                        <ul>
+                                                            {
+                                                                resume.achievementsOne !== "" ? <li>{resume.achievementsOne}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.achievementsTwo !== "" ? <li>{resume.achievementsTwo}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.achievementsThree !== "" ? <li>{resume.achievementsThree}</li> : ""
+                                                            }
+                                                        </ul>
+                                                    </div> :
+                                                    ""
+                                            }
+                                            {
+                                                resume.positionsofRespobsibility !== "" ?
+                                                    <div className="achievements">
+                                                        <h5>Positions of Responsibility</h5>
+                                                        <h7>
+                                                            {
+                                                                resume.positionsofRespobsibility !== "" ? resume.positionsofRespobsibility : ""
+                                                            }
+                                                        </h7>
+                                                        <br />
+                                                        <h9>
+                                                            {
+                                                                resume.positionDescription !== "" ? resume.positionDescription : ""
+                                                            }
+                                                        </h9>
+                                                        <br />
+                                                    </div>
+                                                    : ""
+                                            }
                                         </div>
                                         <div className="secondColumn">
                                             <div>
                                                 <h5>Technical Projects</h5>
-                                                <div className="appOne">
-                                                    <h7>App Name 1 | App Type</h7>
-                                                    <br />
-                                                    <h7>App date</h7><br />
-                                                    <ol>
-                                                        <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                                        <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                                        <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                                    </ol>
+                                                <div className="appOne projectDescription">
+                                                    <h6>
+                                                        {resume.firstProjectName}
+                                                    </h6>
+                                                    <h9 className="projectDescription">{resume.firstProjectDescription}</h9>
                                                     <br />
                                                 </div>
-                                                <div className="appTwo">
-                                                    <h7>App Name 2 | App Type</h7>
-                                                    <br />
-                                                    <h7>App date</h7><br />
-                                                    <ol>
-                                                        <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                                        <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                                        <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                                    </ol>
+                                                <div className="appTwo projectDescription">
+                                                    <h6>
+                                                        {resume.secondProjectName}
+                                                    </h6>
+                                                    <h9 >{resume.secondProjectDescription}</h9>
                                                     <br />
                                                 </div>
                                                 <br />
-                                                <div className="appThree">
-                                                    <h7>App Name 3 | App Type</h7>
-                                                    <br />
-                                                    <h7>App date</h7><br />
-                                                    <ol>
-                                                        <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                                        <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                                        <li>Lorem ipsum dolor sit amet.m in quia ipsum non totam dolores et numquam neque eos blanditiis nostrum. Aut vitae consequatur aut laboriosam placeat eum eius enim est ducimus porro!</li>
-                                                    </ol>
-                                                    <br />
-                                                </div>
+                                                {
+                                                    resume.thirdProjectName !== "" ?
+                                                        <div className="appThree">
+                                                            <h7>
+                                                                {
+                                                                    resume.thirdProjectName !== "" ? resume.thirdProjectName : ""
+                                                                }
+                                                            </h7>
+                                                            <br />
+                                                            <h9 className="projectDescription">
+                                                                {
+                                                                    resume.thirdProjectDescription !== "" ? resume.thirdProjectDescription : ""
+                                                                }
+                                                            </h9>
+                                                            <br />
+                                                        </div> : ""
+                                                }
                                             </div>
-                                            <br />
-                                            <div className="certifications">
-                                                <h5>Certifications</h5>
-                                                <h6>Certificate Header</h6>
-                                                <ol>
-                                                    <li>Certificate 1</li>
-                                                    <li>Certificate 2</li>
-                                                    <li>Certificate 3</li>
-                                                    <li>Certificate 4</li>
-                                                    <li>Certificate 5</li>
-                                                </ol>
-                                            </div>
-                                            <br />
-                                            <div className="achievements">
-                                                <h6>Hackerrank</h6>
-                                                <ol>
-                                                    <li>Bronze Badge:C, C++</li>
-                                                    <li>Silver Badge:Java</li>
-                                                    <li>Gold Badge:Python</li>
-                                                </ol>
-                                                <h6>Codechef</h6>
-                                                <ol>
-                                                    <li>Highest Rating:2 Star Rating</li>
-                                                </ol>
-                                                <h6>Question Solved</h6>
-                                                <ol>
-                                                    <li>300+</li>
-                                                </ol>
-                                            </div>
+                                            <h5>Skills</h5>
+                                            {
+                                                resume.technologyOne !== "" ||
+                                                    resume.technologyTwo !== "" ||
+                                                    resume.technologyFour !== "" ||
+                                                    resume.technologyThree !== "" ||
+                                                    resume.technologyFive !== "" ?
+                                                    <div>
+                                                        <h6 className="skillHeading">Technologies</h6>
+                                                        <ol className="lists">
+                                                            {
+                                                                resume.technologyOne !== "" ? <li className="listElement">{resume.technologyOne}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.technologyTwo !== "" ? <li className="listElement">{resume.technologyTwo}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.technologyThree !== "" ? <li className="listElement">{resume.technologyThree}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.technologyFour !== "" ? <li className="listElement">{resume.technologyFour}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.technologyFive !== "" ? <li className="listElement">{resume.technologyFive}</li> : ""
+                                                            }
+                                                        </ol>
+                                                    </div> : ""
+                                            }
+                                            {
+                                                resume.developmentOne !== "" ||
+                                                    resume.developmentTwo !== "" ||
+                                                    resume.developmentThree !== "" ||
+                                                    resume.developmentFour !== "" ||
+                                                    resume.developmentFive !== "" ?
+
+                                                    <div>
+                                                        <h6 className="skillHeading">Development</h6>
+                                                        <ol className="lists">
+                                                            {
+                                                                resume.developmentOne !== "" ? <li className="listElement">{resume.developmentOne}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.developmentTwo !== "" ? <li className="listElement">{resume.developmentTwo}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.developmentThree !== "" ? <li className="listElement">{resume.developmentThree}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.developmentFour !== "" ? <li className="listElement">{resume.developmentFour}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.developmentFive !== "" ? <li className="listElement">{resume.developmentFive}</li> : ""
+                                                            }
+                                                        </ol>
+                                                    </div>
+                                                    : ""
+                                            }
+                                            {
+                                                resume.programmingLanguagesOne !== "" ||
+                                                    resume.programmingLanguagesTwo !== "" ||
+                                                    resume.programmingLanguagesThree !== "" ||
+                                                    resume.programmingLanguagesFour !== "" ||
+                                                    resume.programmingLanguagesFive !== "" ?
+                                                    <div>
+                                                        <h6 className="skillHeading">Programming Languages</h6>
+                                                        <ol className="lists">
+                                                            {
+                                                                resume.programmingLanguagesOne !== "" ? <li className="listElement">{resume.programmingLanguagesOne}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.programmingLanguagesTwo !== "" ? <li className="listElement">{resume.programmingLanguagesTwo}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.programmingLanguagesThree !== "" ? <li className="listElement">{resume.programmingLanguagesThree}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.programmingLanguagesFour !== "" ? <li className="listElement">{resume.programmingLanguagesFour}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.programmingLanguagesFive !== "" ? <li className="listElement">{resume.programmingLanguagesFive}</li> : ""
+                                                            }
+                                                        </ol>
+                                                    </div>
+                                                    : ""
+                                            }
+
+                                            {
+                                                resume.databaseOne !== "" ||
+                                                    resume.databaseTwo !== "" ||
+                                                    resume.databaseThree !== "" ||
+                                                    resume.databaseFour !== "" ||
+                                                    resume.developmentFive !== ""
+                                                    ?
+                                                    <div>
+                                                        <h6 className="skillHeading">Databases</h6>
+                                                        <ol className="lists">
+                                                            {
+                                                                resume.databaseOne !== "" ? <li className="listElement">{resume.databaseOne}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.databaseTwo !== "" ? <li className="listElement">{resume.databaseTwo}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.databaseThree !== "" ? <li className="listElement">{resume.databaseThree}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.databaseFour !== "" ? <li className="listElement">{resume.databaseFour}</li> : ""
+                                                            }
+                                                            {
+                                                                resume.databaseFive !== "" ? <li className="listElement">{resume.databaseFive}</li> : ""
+                                                            }
+                                                        </ol>
+                                                    </div>
+                                                    : ""
+                                            }
+
+
                                         </div>
                                     </div>
                                 </div>

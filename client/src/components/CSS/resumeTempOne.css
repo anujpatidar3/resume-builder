@@ -3,31 +3,84 @@
     margin-right: auto;
     margin-top: 40px !important;
     height: fit-content;
-    max-width: 900px!important;
+    max-width: 800px !important;
 }
 
-.heading{
+.heading {
     text-align: center;
     margin-bottom: 4px;
     margin-top: 4px;
     font-weight: 400;
 }
 
-.subHeading{
+.projectDescription{
+    text-overflow: unset;
+    max-width: 500px!important;
+}
+
+.educationOne {
+    display: flex;
+    flex-direction: column;
+}
+
+.subHeading {
     text-align: center;
     font-weight: 100;
 }
 
-.firstColumn{
+.firstColumn {
     max-width: 200px;
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-left: 10px;
 }
 
-.instituteTwo{
+.instituteTwo {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+}
+
+.linksItem{
+    text-decoration: none;
+    color: grey;
+    text-align: left;
+    font-weight: 600;
+}
+
+.linkHeader{
+    text-align: left;
+    color: black;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+}
+
+.appTwo{
     margin-top: 20px;
 }
 
-.columns{
-    display: flex;  
-    flex-direction: row; 
+.appThree{
+    margin-top: 20px;
+}
+
+.lists{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+.listElement{
+    margin-right: 30px;
+}
+
+.skillHeading{
+    color: black;
+    font-weight: 600;
 }
