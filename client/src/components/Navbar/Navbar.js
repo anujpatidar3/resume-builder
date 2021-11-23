@@ -11,7 +11,7 @@ const NavBar = () => {
     const renderList = () => {
         if (state) {
             return [
-                <li><Link to="/" className="logOutButton">Log Out</Link></li>
+                <li><Link to="/" className="logOutButton">Logout</Link></li>
             ]
         } else {
             return [
