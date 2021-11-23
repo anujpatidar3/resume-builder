@@ -46,7 +46,7 @@ const MyResumes = () => {
             infinite={true}
             keyBoardControl={true}
             customTransition="all .5"
-            transitionDuration={2000}
+            transitionDuration={500}
             containerClass="carousel-container"
             removeArrowOnDeviceType={["tablet", "mobile"]}
             dotListClass="custom-dot-list-style"
