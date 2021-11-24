@@ -7,6 +7,10 @@ Various templates will be made available to the user for making a resume. It als
 ## Installation and Setup Instructions
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
+Deployment link:
+
+[Resume Builder Application](https://resume-builder71943.herokuapp.com/)
+
 Installation:
 
 * Client side: `npm install`   
