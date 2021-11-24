@@ -1,12 +1,13 @@
 import React, { useEffect, createContext, useReducer, useContext } from 'react';
 import NavBar from './components/Navbar/Navbar';
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useNavigate, useLocation } from 'react-router-dom'
 import Home from './components/screens/Home';
 import SignIn from './components/screens/SignIn';
 import SignUp from './components/screens/SignUp';
 import MyResumes from './components/screens/MyResumes';
 import EditResumes from './components/screens/editResumes';
 import CreateResume from './components/screens/CreateResume';
+import Reset from './components/screens/Reset'
 import { reducer, initialState } from './reducers/userReducer'
 
 export const UserContext = createContext()
@@ -14,15 +15,18 @@ export const UserContext = createContext()
 const Routing = () => {
   const navigate = useNavigate();
   const { state, dispatch } = useContext(UserContext)
+  const location = useLocation();
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"))
 
     if (user) {
-      dispatch({type:"USER",payload:user})
+      dispatch({ type: "USER", payload: user })
       navigate('/')
     } else {
-      navigate('/signup')
+      if (!location.pathname.startsWith('/resetpassword')) {
+        navigate('/signup')
+      }
     }
   }, [])
 
@@ -34,6 +38,7 @@ const Routing = () => {
       <Route exact path='/editresume' element={<EditResumes />} />
       <Route exact path='/myresumes' element={<MyResumes />} />
       <Route exact path='/createresume' element={<CreateResume />} />
+      <Route exact path='/resetpassword' element={<Reset />} />
     </Routes>
   )
 }

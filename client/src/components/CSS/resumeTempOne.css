@@ -84,3 +84,18 @@
     color: black;
     font-weight: 600;
 }
+
+.buttonsmyresume{
+    margin-left: 43%;
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+}
+
+.editButton{
+    margin-left: 20px;
+}
+
+.deleteButton{
+    margin-left: 20px;
+}

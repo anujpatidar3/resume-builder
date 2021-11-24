@@ -171,7 +171,7 @@ const CreateResume = () => {
                 } else {
                     toast("Resume Created Succesfully",
                         { position: toast.POSITION.TOP_RIGHT })
-                    navigate('/')
+                    navigate('/myresumes')
                 }
             }).catch(err => {
                 console.log(err)

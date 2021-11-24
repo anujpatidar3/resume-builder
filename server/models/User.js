@@ -13,7 +13,9 @@ const UserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+    resetToken:String,
+    expireToken:Date
 })
 
 mongoose.model("User", UserSchema)
