@@ -23,6 +23,23 @@ To Visit App:
 
 ## Design
 
+* Sign In Screen: 
+  <p align="center">
+  <img src = "images/ic_login.png" >
+  </p>
+  
+ * Sign Up Screen:
+   <p align="center">
+   <img src = "images/ic_signup.png" >
+   </p>
+   
+ * Reset Password Screen:
+   <p align="center">
+   <img src = "images/ic_reset_password.png" >
+   </p>
+   
+ * Dasboard Screen:
+  
 
 ## Technologies Used
 * [HTML](https://devdocs.io/html/): It is the code that is used to structure a web page and its content.
