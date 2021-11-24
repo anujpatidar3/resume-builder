@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <Container>
             <Row>
-                <Col sm={12} md={6} lg={4}>
+                <Col sm={12} md={6} >
                     <Link className="linkStyle" to='/createresume'>
                         <div className="card homeCard">
                             <div className="card-content">
@@ -17,22 +17,12 @@ const Home = () => {
                         </div>
                     </Link>
                 </Col>
-                <Col sm={12} md={6} lg={4}>
+                <Col sm={12} md={6} >
                     <Link className="linkStyle" to='/myresumes'>
                         <div className="card homeCard">
                             <div className="card-content">
                                 <span className="card-title headingStyle">SHOW MY RESUMES</span>
                                 <p className="homeText">You can see your Previous Resumes. Here you can choose to edit, download or delete resume. </p>
-                            </div>
-                        </div>
-                    </Link>
-                </Col>
-                <Col sm={12} md={6} lg={4}>
-                    <Link className="linkStyle" to='/editresume'>
-                        <div className="card homeCard">
-                            <div className="card-content">
-                                <span className="card-title headingStyle">EDIT RESUME</span>
-                                <p className="homeText">You can see your Previous Resumes. Here you can choose to edit the resume. </p>
                             </div>
                         </div>
                     </Link>

@@ -22,10 +22,9 @@ const PrintResume = () => {
                 trigger={() => <button style={{ display: "none" }}>Print this out!</button>}
                 content={() => componentRef.current}
             />
-                <Container className="card resumeCard" ref={componentRef}>
+                <Container className="card resumeCard" style={{border:"none"}} >
                     <Row>
-
-                        <div >
+                        <div ref={componentRef}>
                             <div className="heading">
                                 <h3 className="heading">{data.name}</h3>
                             </div>

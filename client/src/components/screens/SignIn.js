@@ -63,7 +63,7 @@ const SignIn = () => {
                                 Created By -
                                 <a className="githubLinks" href="https://github.com/anujpatidar3"><img className="githubIcon" src="https://img.icons8.com/material-two-tone/24/000000/github.png" />Anuj Patidar</a>
                                 <a className="githubLinks" href="https://github.com/aikansh2001yadav"><img className="githubIcon" src="https://img.icons8.com/material-two-tone/24/000000/github.png" />Aikansh Yadav</a>
-                                <a className="githubLinks" href="https://github.com/Jay2001dave"><img className="githubIcon" src="https://img.icons8.com/material-two-tone/24/000000/github.png" />Anuj Patidar</a>
+                                <a className="githubLinks" href="https://github.com/Jay2001dave"><img className="githubIcon" src="https://img.icons8.com/material-two-tone/24/000000/github.png" />Jay Dave</a>
                             </div>
                         </h4>
                     </div>
