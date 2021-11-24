@@ -272,7 +272,7 @@ const EditResumes = () => {
             ssr={false}
             sliderClass={'react-multi-carousel-list'}
             infinite={true}
-            keyBoardControl={true}
+            keyBoardControl={false}
             customTransition='transform 300ms ease-in-out'
             transitionDuration={500}
             containerClass="carousel-container"
