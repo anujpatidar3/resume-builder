@@ -8,6 +8,7 @@ import MyResumes from './components/screens/MyResumes';
 import EditResumes from './components/screens/editResumes';
 import CreateResume from './components/screens/CreateResume';
 import Reset from './components/screens/Reset'
+import PrintResume from './components/screens/PrintResume';
 import { reducer, initialState } from './reducers/userReducer'
 
 export const UserContext = createContext()
@@ -38,6 +39,7 @@ const Routing = () => {
       <Route exact path='/editresume' element={<EditResumes />} />
       <Route exact path='/myresumes' element={<MyResumes />} />
       <Route exact path='/createresume' element={<CreateResume />} />
+      <Route exact path='/printresume' element={<PrintResume />} />
       <Route exact path='/resetpassword' element={<Reset />} />
     </Routes>
   )

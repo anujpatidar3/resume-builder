@@ -1,17 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../CSS/resumeTempOne.css'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ReactToPrint from 'react-to-print';
-import { useReactToPrint } from 'react-to-print';
 
 
 const MyResumes = () => {
 
     const [data, setData] = useState([])
-    const componentRef = useRef();
 
     const responsive = {
         desktop: {
@@ -47,9 +44,9 @@ const MyResumes = () => {
         localStorage.setItem("resume", JSON.stringify(resume))
     }
 
-    const handlePrint = useReactToPrint({
-        content: () => componentRef.current,
-    });
+   const printResume=(myResume)=>{
+       localStorage.setItem("myResume",JSON.stringify(myResume))
+   }
 
     const deleteResume=(resumeId)=>{
         fetch(`/deleteresume/${resumeId}`,{
@@ -90,11 +87,7 @@ const MyResumes = () => {
                         <div key={myResume._id}>
                             <Container className="card resumeCard">
                                 <Row>
-                                    <ReactToPrint
-                                        trigger={() => <button style={{ display: "none" }}>Print this out!</button>}
-                                        content={() => componentRef.current}
-                                    />
-                                    <div ref={componentRef}>
+                                    <div>
                                         <div className="heading">
                                             <h3 className="heading">{myResume.name}</h3>
                                         </div>
@@ -373,7 +366,7 @@ const MyResumes = () => {
                                 </Row>
                             </Container>
                             <div className="buttonsmyresume">
-                                <button className="btn btn-primary printButton" onClick={handlePrint}>Print</button>
+                                <Link to='/printresume'><button className="btn btn-primary printButton" onClick={()=>printResume(myResume)}>Print</button></Link>
                                 <Link to='/editresume'><button className="btn btn-primary editButton" onClick={() => editData(myResume)}>Edit</button></Link>
                                 <Link to='/'><button className="btn btn-danger deleteButton" onClick={() => deleteResume(myResume._id)}>Delete</button></Link>
                             </div>
