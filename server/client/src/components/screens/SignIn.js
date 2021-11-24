@@ -1,5 +1,5 @@
-import React, { useState,useContext } from 'react';
-import {UserContext} from '../../App'
+import React, { useState, useContext } from 'react';
+import { UserContext } from '../../App'
 import { Container, Row, Col } from 'react-bootstrap'
 import '../CSS/SignIn.css'
 import { Link, useNavigate } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const SignIn = () => {
-    const {state,dispatch}=useContext(UserContext)
+    const { state, dispatch } = useContext(UserContext)
     const navigate = useNavigate();
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -33,9 +33,9 @@ const SignIn = () => {
                     toast(data.error,
                         { position: toast.POSITION.TOP_RIGHT })
                 } else {
-                    localStorage.setItem("jwt",JSON.stringify(data.token))
-                    localStorage.setItem("user",JSON.stringify(data.user))
-                    dispatch({type:"USER",payload:data.user})
+                    localStorage.setItem("jwt", JSON.stringify(data.token))
+                    localStorage.setItem("user", JSON.stringify(data.user))
+                    dispatch({ type: "USER", payload: data.user })
                     toast("Signed In Successfully",
                         { position: toast.POSITION.TOP_RIGHT })
                     navigate('/')
@@ -50,11 +50,21 @@ const SignIn = () => {
             <Row>
                 <Col sm={12} lg={6}>
                     <div className="aboutUs">
-                        <h1>
+                        <h1 className="aboutUsHeading">
                             About Us
                         </h1>
                         <h4>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            <div className="aboutUsPara">
+                                Resume Builder takes various information from users and plug it in visual form which the user can download, edit or delete. Resume builders are interactive online resume templates that allow you to plug in information and build a cohesive resume.
+                                The aim of the project is to automate the process of making resumes. The user can make new resume, edit/delete previous resume and see resumes. The project aims to provide secure authentication and registeration.
+                            </div>
+                            <br />
+                            <div className="createdBy">
+                                Created By -
+                                <a className="githubLinks" href="https://github.com/anujpatidar3"><img className="githubIcon" src="https://img.icons8.com/material-two-tone/24/000000/github.png" />Anuj Patidar</a>
+                                <a className="githubLinks" href="https://github.com/aikansh2001yadav"><img className="githubIcon" src="https://img.icons8.com/material-two-tone/24/000000/github.png" />Aikansh Yadav</a>
+                                <a className="githubLinks" href="https://github.com/Jay2001dave"><img className="githubIcon" src="https://img.icons8.com/material-two-tone/24/000000/github.png" />Anuj Patidar</a>
+                            </div>
                         </h4>
                     </div>
                 </Col>
