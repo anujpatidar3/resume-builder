@@ -4,7 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import '../CSS/edit.css'
 
 const EditResumes = () => {
 
@@ -264,6 +264,7 @@ const EditResumes = () => {
 
     return (
         <Carousel
+            className="editResumeCard"
             swipeable={true}
             draggable={false}
             showDots={false}
@@ -275,7 +276,6 @@ const EditResumes = () => {
             customTransition='transform 300ms ease-in-out'
             transitionDuration={500}
             containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px">
             <div>

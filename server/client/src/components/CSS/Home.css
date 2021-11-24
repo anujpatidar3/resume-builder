@@ -9,9 +9,10 @@
 }
 
 .homeCard{
+    opacity:0.85;
     align-self: center;
     height: 230px!important;
-    width: 370px;
+    width: 420px;
     margin-left: auto!important;
     margin-right: auto!important;
     margin-top: 20%;
@@ -30,3 +31,4 @@
     font-weight: 300;
     color: black!important;;
 }
+
