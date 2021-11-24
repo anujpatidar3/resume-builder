@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import '../CSS/resumeTempOne.css'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -42,9 +43,29 @@ const MyResumes = () => {
             })
     }, [])
 
+    const editData = (resume) => {
+        localStorage.setItem("resume", JSON.stringify(resume))
+    }
+
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
     });
+
+    const deleteResume=(resumeId)=>{
+        fetch(`/deleteresume/${resumeId}`,{
+            method:"delete",
+            headers:{
+                "Authorization": localStorage.getItem("jwt")
+            }
+        }).then(res=>res.json())
+        .then(result=>{
+            console.log(result)
+            const newData=data.filter(item=>{
+                return item._id!==result._id
+            })
+            setData(newData)
+        })
+    }
 
     return (
         <Carousel
@@ -62,7 +83,7 @@ const MyResumes = () => {
             removeArrowOnDeviceType={["tablet", "mobile"]}
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
-            >
+        >
             {
                 data.map(myResume => {
                     return (
@@ -349,9 +370,13 @@ const MyResumes = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <button className="btn btn-primary" onClick={handlePrint}>Print</button>
                                 </Row>
                             </Container>
+                            <div className="buttonsmyresume">
+                                <button className="btn btn-primary printButton" onClick={handlePrint}>Print</button>
+                                <Link to='/editresume'><button className="btn btn-primary editButton" onClick={() => editData(myResume)}>Edit</button></Link>
+                                <Link to='/'><button className="btn btn-danger deleteButton" onClick={() => deleteResume(myResume._id)}>Delete</button></Link>
+                            </div>
                         </div>
                     )
                 })
