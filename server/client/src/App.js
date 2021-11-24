@@ -9,7 +9,9 @@ import EditResumes from './components/screens/editResumes';
 import CreateResume from './components/screens/CreateResume';
 import Reset from './components/screens/Reset'
 import PrintResume from './components/screens/PrintResume';
+import newPassword from './components/screens/newpassword'
 import { reducer, initialState } from './reducers/userReducer'
+
 import './App.css'
 
 export const UserContext = createContext()
@@ -26,7 +28,7 @@ const Routing = () => {
       dispatch({ type: "USER", payload: user })
       navigate('/')
     } else {
-      if (!location.pathname.startsWith('/resetpassword')) {
+      if (!location.pathname.startsWith('/reset')) {
         navigate('/signup')
       }
     }
@@ -41,7 +43,8 @@ const Routing = () => {
       <Route exact path='/myresumes' element={<MyResumes />} />
       <Route exact path='/createresume' element={<CreateResume />} />
       <Route exact path='/printresume' element={<PrintResume />} />
-      <Route exact path='/resetpassword' element={<Reset />} />
+      <Route exact path='/reset' element={<Reset />} />
+      <Route exact path='/reset/:token' element={<newPassword />} />
     </Routes>
   )
 }
