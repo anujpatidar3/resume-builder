@@ -37,11 +37,12 @@ router.post('/signup', (req, res) => {
                     user.save().then(user => {
                         transporter.sendMail({
                             to: user.email,
-                            from: "imt_2019019@iiitm.ac.in",
+                            from: "anujpatidar33@gmail.com",
                             subject: "Sign Up Succesfully",
                             html: "<h1>Welcome to Resume Builder</h1>"
                         })
-                        res.json({ message: "User Saved Succesfully" })
+                            (res.json({ message: "User Saved Succesfully" }))
+                        
                     }).catch(err => {
                         console.log(err)
                     })
@@ -91,20 +92,43 @@ router.post('/resetpassword', (req, res) => {
                     return res.status(422).json({ error: "User doesn't exist" })
                 }
                 user.resetToken = token
-                user.expireToken = Date.now() + 3600
+                user.expireToken = Date.now() + 3600000
                 user.save().then((result) => {
                     transporter.sendMail({
                         to: user.email,
-                        from: "imt_2019019@iiitm.ac.in",
-                        subject:"Password rest",
-                        html:`
+                        from: "anujpatidar33@gmail.com",
+                        subject: "Password reset",
+                        html: `
                         <p>You requested for resetting password</p>
-                        <h5> Click on this <a href="http://localhost:3000/reset/${token}">link</a> to reset password</h5>`
+                        <h5> Click on this <a href="https://resume-builder71943.herokuapp.com/reset/${token}">link</a> to reset password</h5>
+                        `
                     })
-                    res.json({message:"Check your Email for Password Reset"})
+                    res.json({ message: "Check your Email for Password Reset" })
                 })
             })
     })
+})
+
+router.post('/newpassword',(req,res)=>{
+    const newPassword=req.body.password
+    const sentToken=req.body.token
+    User.findOne({resetToken:sentToken,expireToken:{$gt:Date.now()}})
+    .then(user=>{
+        if(!user){
+            return res.status(422).json({error:"Try Again Session Expired"})
+        }
+        bcrypt.hash(newPassword,10).then(hashedPassword=>{
+            user.password=hashedPassword
+            user.resetToken=undefined
+            user.expireToken=undefined
+            user.save().then((savedUser)=>{
+                res.json({message:"Password Updated"})
+            })
+        })
+    }).catch(err=>{
+        console.log(err)
+    })
+
 })
 
 module.exports = router
