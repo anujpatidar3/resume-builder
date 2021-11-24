@@ -10,6 +10,7 @@ import CreateResume from './components/screens/CreateResume';
 import Reset from './components/screens/Reset'
 import PrintResume from './components/screens/PrintResume';
 import { reducer, initialState } from './reducers/userReducer'
+import './App.css'
 
 export const UserContext = createContext()
 
@@ -49,7 +50,7 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState)
   return (
     <UserContext.Provider value={{ state, dispatch }}>
-      <BrowserRouter>
+      <BrowserRouter className="bg">
         <NavBar />
         <Routing />
       </BrowserRouter>
