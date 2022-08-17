@@ -1,0 +1,82 @@
+
+.aboutUs {
+    padding-top: 10%;
+    margin: 2%;
+    font-size: small !important;
+}
+
+.aboutUsHeading{
+    color: whitesmoke;
+}
+
+.createdBy {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutUsPara {
+    color: whitesmoke;
+    font-weight: 400;
+}
+
+.githubLinks {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+
+
+.githubIcon {
+    margin-top: -6px;
+    margin-right: 4px;
+}
+
+.signInCard {
+    padding-top: 10%;
+    margin: 2%;
+    max-width: 500px;
+    opacity: 0.85;
+}
+
+.AuthCard {
+    padding: 20px;
+    text-align: center;
+}
+
+.loginHeading {
+    margin: 20px;
+    padding-bottom: 10px;
+}
+
+.signinButton {
+    width: max-content;
+    color: #fff !important;
+    text-decoration: none;
+    text-shadow: none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.blue.darken-1 {
+    background-color: #17a2b8 !important;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #17a2b8 !important;
+    box-shadow: 0 1px 0 0 #17a2b8 !important;
+}
+
+.linkStyle {
+    color: #17a2b8;
+    text-decoration: none;
+    font-size: large;
+    margin-top: 10px;
+}
+
+.linkStyle:hover {
+    color: #17a2b8;
+}
