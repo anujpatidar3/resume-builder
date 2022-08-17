@@ -7,6 +7,10 @@ Various templates will be made available to the user for making a resume. It als
 ## Installation and Setup Instructions
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
+Deployment link:
+
+[Resume Builder Application](https://resume-builder71943.herokuapp.com/)
+
 Installation:
 
 * Client side: `npm install`   
@@ -39,6 +43,42 @@ To Visit App:
    </p>
    
  * Dasboard Screen:
+   <p align="center">
+   <img src = "images/ic_dashboard.png" >
+   </p>
+   
+ * Create Resume:
+ 
+    - **Education Form Screen:** 
+      <p align="center">
+      <img src = "images/education_from_create_resume.png">
+      </p>
+      
+     - **Skills Form Screen:** 
+       <p align="center">
+       <img src = "images/skills_from_create_resume.png">
+       </p>
+       
+     - **Links Form Screen:** 
+        <p align="center">
+        <img src = "images/links_from_create_resume.png">
+        </p> 
+  
+      - **Projects Form Screen:**
+         <p align="center">
+         <img src = "images/projects_from_create_resume.png">
+         </p> 
+         
+         
+ * Show/Edit/Delete Resume Screen:
+   <p align="center">
+   <img src = "images/resume.png">
+   </p>
+         
+ * Print Resume Screen:
+   <p align="center">
+   <img src = "images/print_screen.png">
+   </p>   
   
 
 ## Technologies Used
