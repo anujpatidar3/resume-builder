@@ -8,11 +8,10 @@ const User = mongoose.model("User");
 const { JWT_SECRET } = require('../config/keys')
 const nodemailer = require('nodemailer')
 const sendGridTransport = require('nodemailer-sendgrid-transport')
-//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
 
 const transporter = nodemailer.createTransport(sendGridTransport({
     auth: {
-        api_key: "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"
+        api_key: API_KEY
     }
 }))
 
