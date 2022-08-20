@@ -58,7 +58,9 @@ const SignUp = () => {
                             <br />
                             <div className="createdBy">
                                 Created By -
-                                <a className="githubLinks" href="https://github.com/younikarn"><img className="githubIcon" src="https://img.icons8.com/material-two-tone/24/000000/github.png" />Nidhi Karn</a>
+                                <a className="githubLinks" href="https://github.com/anujpatidar3"><img className="githubIcon" src="https://img.icons8.com/material-two-tone/24/000000/github.png" alt="Github"/>Anuj Patidar</a>
+                                <a className="githubLinks" href="https://github.com/aikansh2001yadav"><img className="githubIcon" src="https://img.icons8.com/material-two-tone/24/000000/github.png" alt="Github"/>Aikansh Yadav</a>
+                                <a className="githubLinks" href="https://github.com/Jay2001dave"><img className="githubIcon" src="https://img.icons8.com/material-two-tone/24/000000/github.png" alt="Github"/>Jay Dave</a>
                             </div>
                         </h4>
                     </div>
